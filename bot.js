@@ -134,6 +134,27 @@ client.on('messageDelete', message => {
 })
 
 
+const iltifatlar = [
+    "Beni deli ediyorsun. Yani; senin için deliriyorum ",
+    "sütüm yarım yağlı mutluluğum sana bağlı",
+    "meleksin ama canımı alıyorsun yoksa Azrailim misin?",
+    "Senle Deniz Kenarında Gökyüzünü İzlemek İsterdim Ah Be Şimdiki Duruma Bak",
+    "Duygularım Darmadağın.",
+    "Senin Gülüşün Benim En Sevdiğim Mevsim.",
+    "İlk öpücüğümüz destansı olacak, değil mi?"
+];
+
+var iltifatSayi = 0;
+client.on("message", async message => {
+    if (message.channel.id !== ayarlar.chat || message.author.bot) return;
+    iltifatSayi++
+    if (iltifatSayi >= 1) { // 50 yazan yer, 50 mesajda bir iltifat edeceğini gösterir.
+        iltifatSayi = 0;
+        const random = Math.floor(Math.random() * ((iltifatlar).length - 1) + 1);
+        message.reply(`${(iltifatlar)[random]}`);
+    };
+});
+
 //------------------------------------------------------------------------------------------------------------\\
 
 
