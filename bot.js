@@ -148,7 +148,7 @@ var iltifatSayi = 0;
 client.on("message", async message => {
     if (message.channel.id !== ayarlar.chat || message.author.bot) return;
     iltifatSayi++
-    if (iltifatSayi >= 1) { // 50 yazan yer, 50 mesajda bir iltifat edeceğini gösterir.
+    if (iltifatSayi >= 40) { // 50 yazan yer, 50 mesajda bir iltifat edeceğini gösterir.
         iltifatSayi = 0;
         const random = Math.floor(Math.random() * ((iltifatlar).length - 1) + 1);
         message.reply(`${(iltifatlar)[random]}`);
