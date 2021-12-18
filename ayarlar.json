@@ -2,5 +2,6 @@
     "prefix": ".",
     "sahip": "Sahip ID (kado reis ID)",
     "botses":"Bot Ses ID ",
-    "chat": "Chat Kanalı ID"
+    "chat": "Chat Kanalı ID",
+    "voicelog": "Voice Log ID"
 }
