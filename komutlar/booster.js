@@ -27,10 +27,10 @@ member.setNickname(`${nickname}`)
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ["zengin"],
+  aliases: ["booster"],
   permLevel: 0
 }
 
 exports.help = {
-  name: 'bisim'
+  name: 'booster'
 };
