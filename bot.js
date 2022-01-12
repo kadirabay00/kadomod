@@ -141,14 +141,19 @@ const iltifatlar = [
     "Senle Deniz Kenarında Gökyüzünü İzlemek İsterdim Ah Be Şimdiki Duruma Bak",
     "Duygularım Darmadağın.",
     "Senin Gülüşün Benim En Sevdiğim Mevsim.",
-    "İlk öpücüğümüz destansı olacak, değil mi?"
+    "İlk öpücüğümüz destansı olacak, değil mi?",
+    "konum atta belamızı bulalım bebeğim",
+    "Üşüdüysen canımı yakabilirsin",
+    "Ölmene gerek yok, yanıma gel mekanın cennet olsun",
+    "Teknoloji çok ilerledi, güneşi bu kadar yakından görebildiğimize göre",
+    "Dünyanın en güzel manzarasına sırtımı döner gülüşünü izlerim"
 ];
 
 var iltifatSayi = 0;
 client.on("message", async message => {
     if (message.channel.id !== ayarlar.chat || message.author.bot) return;
     iltifatSayi++
-    if (iltifatSayi >= 40) { // 50 yazan yer, 50 mesajda bir iltifat edeceğini gösterir.
+    if (iltifatSayi >= 25) { // 50 yazan yer, 50 mesajda bir iltifat edeceğini gösterir.
         iltifatSayi = 0;
         const random = Math.floor(Math.random() * ((iltifatlar).length - 1) + 1);
         message.reply(`${(iltifatlar)[random]}`);
